@@ -217,7 +217,10 @@ void *writerThread(void *conn)
 
 /* TODO: #define filenames for the client private key, certificatea,
    CA filename, etc. that you need to create a client */
-
+#define PRIVATE_KEY laptop.key
+#define CERTIFICATE laptop.csr
+#define CA_CERTIFICATE_NAME signing.pem
+#define SERVER_NAME alex.com
 
 /* END TODO */
 void connectToServer(const char *serverName, int portNum)
@@ -241,7 +244,8 @@ int main(int ac, char **av)
     /* TODO: Add in while loop to prevent main from exiting while the
     client loop is running */
 
-
+    while(networkActive) { 
+    };
 
     /* END TODO */
 	printf("\nMAIN exiting\n\n");
